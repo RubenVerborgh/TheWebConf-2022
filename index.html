@@ -231,6 +231,139 @@
 }</code></pre>
   </div>
 
+  <div class="slide" id="abstract-knowledge">
+    <h2>
+      Apps, in some way,<br>
+      read–write access to a <em>knowledge graph</em>.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/abstract-knowledge.svg" alt="[a browser app needs access to knowledge]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="abstract-transfer">
+    <h2>
+      The graph is too big for <em>any</em> single place,<br>
+      so apps reconstruct the whole via parts.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/abstract-transfer.svg" alt="[apps operate parts of the knowledge graph]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="single-knowledge-api">
+    <h2>
+      When knowledge fits in a single source,<br>
+      we can place an API in front of it.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/single-knowledge-api.svg" alt="[accessing knowledge hosted on a single server]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="single-json-api">
+    <h2>
+      Abstract knowledge needs to be exposed<br>
+      through concrete documents/resources.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/single-json-api.svg" alt="[accessing knowledge through a single JSON API]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="single-graphql-api">
+    <h2>
+      A GraphQL API combines data from across<br>
+      multiple resources of the “main” API.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/single-graphql-api.svg" alt="[GraphQL APIs can access multiple conceptual resources]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="multi-source-knowledge">
+    <h2>
+      Let’s revisit API design for cases where<br>
+      knowledge cannot fit in one place.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/multi-source-knowledge.svg" alt="[an application needs to access a knowledge graph that is distributed across multiple servers]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="multi-source-apis">
+    <h2>
+      Each data pod exposes its part<br>
+      as RDF through a Web API.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/multi-source-apis.svg" alt="[each server exposes an RDF API]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="heterogeneous-apis">
+    <h2>
+      Different APIs for RDF<br>
+      have different characteristics.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/heterogeneous-apis.svg" alt="[RDF can be exposed through different APIs]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="heterogeneous-multi-apis">
+    <h2>
+      It quickly becomes unfeasible for apps<br>
+      to deal with all possible API combinations.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/heterogeneous-multi-apis.svg" alt="[each server might expose the same knowledge through multiple APIs]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="graphql-multi-apis">
+    <h2>
+      A GraphQL Web API is not possible here,<br>
+      since there is no server to attach it to.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/graphql-multi-apis.svg" alt="[we cannot attach a GraphQL API to any single server when the data resides in multiple servers]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="graphql-client-side">
+    <h2>
+      The app can still be written with GraphQL:<br>
+      a library translates it into HTTP requests.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/graphql-client-side.svg" alt="[a client-side library translates GraphQL queries from the app into HTTP requests for different APIs and servers]"/>
+    </figure>
+  </div>
+
+  <div class="slide" id="transition">
+    <h2>
+      Solid technology marks a transition<br>
+      from API integration to data integration.
+    </h2>
+    <ul>
+      <li class="next">
+        Solid app developers face challenges…<br>
+        <span class="next">…but API problems are not among those!</span>
+      </li>
+      <li class="next">
+        The way we write apps can be independent<br>
+        of the Web APIs offered by servers.
+        <ul>
+          <li>Clients can have their own abstractions.</li>
+        </ul>
+      </li>
+      <li class="next">
+        Let's invest in reusable <em>client development patterns</em>.
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="toc-devx">
     <ul>
       <li><a href="#toc-solid">The Solid ecosystem</a></li>
