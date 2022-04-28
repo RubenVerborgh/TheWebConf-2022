@@ -70,3 +70,8 @@ p.venue {
   opacity: .2;
   filter: contrast(1.1);
 }
+
+/* Inline elements */
+del {
+  text-decoration: var(--accent) .08em line-through;
+}
